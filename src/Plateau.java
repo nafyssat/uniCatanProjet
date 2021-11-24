@@ -72,8 +72,10 @@ public class Plateau {
 					tab_affichage[i][j] = "*";
 				} else if(i%2 == 1 && j%2 == 1) {
 					tab_affichage[i][j] = tuile_aux[i][j];
+				} else if(i%2 == 0 && j%2 == 1) {
+					tab_affichage[i][j] = "---";
 				} else {
-					tab_affichage[i][j] = " ";
+					tab_affichage[i][j] = "|";
 				}
 			}
 		}
@@ -105,7 +107,7 @@ public class Plateau {
 
 		for(int i = 0; i < 9; i++) {
 			for(int j = 0; j < 9; j++) {
-				System.out.format("%-5s",tab_affichage[i][j]);
+				System.out.format("%-6s",tab_affichage[i][j]);
 			}
 
 			System.out.println("");
